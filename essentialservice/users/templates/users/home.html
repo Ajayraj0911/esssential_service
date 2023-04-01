@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential Service Management</title>
+    <link rel="stylesheet" href="{% static 'users/css/style.css' %}" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f75e97ac39.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Starting of Header -->
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static 'users/img/logo.png' %}" alt="logo"></a>
+            <a href="{% url 'home' %}">ESM</a>
+        </div>
+        <nav>
+            <ul class="nav-bar">
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="{% url 'register' %}"><button type="button" class="btn btn-dark">Register</button></a></li>
+                    <li><a href="{% url 'login' %}"><button type="button" class="btn btn-dark">Sign In</button></a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"> <i class="fas fa-bars"> </i></label>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- Ending of Header -->
+
+    <!-- starting of first content -->
+    <div class="image-container" id="home">
+        <img src="{% static 'users/img/img1.jpg' %}" alt="Image Description">
+        <div class="text-overlay">
+            <p>
+                Nearby Services at your Doorstep<br>
+                An initiative to boost Local Economy
+            </p>
+        </div>
+    </div>
+    <!-- Ending of first content -->
+
+    <!-- Starting of second content -->
+
+    <div class="home_services" id="service">
+        <p id="home_service_line">Our services</p>
+
+        <div class="category_1">
+            <form class=button_1 action="login.html">
+                <input type="image" src="{% static 'users/img/plumber.png' %}" width="70" height="70"></input>
+                <p>Plumbing </p>
+            </form>
+
+            <form class=button_1 action="login.html">
+                <input type="image" src="{% static 'users/img/electrician.png' %}" width="70" height="70"></input>
+                <p>Electrical</p>
+            </form>
+
+            <form class=button_1 action="login.html">
+                <input type="image" src="{% static 'users/img/cleaning.png' %}" width="70" height="70"></input>
+                <p>Cleaning</p>
+            </form>
+
+            <form class=button_1 action="login.html">
+                <input type="image"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Aud0ogDoFyDw40s_q4mx9LVDljC9k3d3jQ&usqp=CAU"
+                    width="70" height="70"></input>
+                <p>Daily Chores</p>
+            </form>
+
+        </div>
+    </div>
+    <!-- Ending of second content -->
+
+    <!-- Stating of About us  -->
+    <div class="about-section" id="about">
+        <h1>About Us Page</h1>
+        <p>Essential Service Management</p>
+        <p>Provides an interface for the customers which depicts the services ,such as Plumbing,
+        <p>Electrical Repair , Cleaning and
+            other daily chores , available in the nearby area .</p>
+        </p>
+    </div>
+
+    <!-- <h2 style="text-align:center">Our Team</h2> -->
+    <section class="about-us">
+        <div class="about">
+            <img src="{% static 'users/img/ajay.jpg' %}" class="pic">
+            <div class="text">
+                <h2>About Us</h2>
+                <h5>Platform which Connect <span>Service Providers and Customers</span></h5>
+                <p>Essential Service is a platform where customers can schedule dependable and high-quality services
+                    such as beauty
+                    treatments, massages, haircuts, house cleaning, appliance repair, painting, pest control, and many
+                    more – all delivered
+                    quickly at home by experienced experts.
+
+                </p>
+                <br>
+                <p>Provides a convenient and efficient way to both business
+                    providers and customers to interact through a web-based
+                    application.Consequently, it helps boosting the domestic businesses and supports local economy.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Ending of About us -->
+
+    <!-- Starting of contact us -->
+    <section id="contact">
+        <div class="container2">
+            <div class="content">
+                <div class="left-side">
+                    <div class="address details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="text-one">301-305, 3rd Floor, Surabhi
+                            Complex, Nr. Municipal Market,</div>
+                        <div class="text-two">Chimanlal Girdharlal Road,
+                            Navrangpura,Ahmedabad
+                            Gujarat- 380009</div>
+                    </div>
+                    <div class="phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="text-one">+91 7016749548</div>
+                    </div>
+                    <div class="email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="text-one">support@grownited.com</div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="topic-text">Send us a message</div>
+                    <p>If you have any work from us or any types of quries related to our service, you can send us
+                        message
+                        from here. It's our pleasure to help you.</p>
+                    <form action="#">
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="input-box message-box">
+                            <input type="text" placeholder="Enter your message">
+                        </div>
+                        <div class="button">
+                            <input type="button" value="Send Now">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ending of contact us -->
+
+    <!-- starting of footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Essential Service Management. All rights reserved.</p>
+            <a href="index.html"><img src="{% static 'users/img/logo.png' %}" alt=""></a>
+        </div>
+    </footer>
+    <!-- ending of footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+</body>
+</html>
